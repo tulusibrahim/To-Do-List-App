@@ -26,7 +26,7 @@ function showdata(){
 
 	$getdata = "SELECT * FROM todolist";
 	$show = mysqli_query($connection, $getdata);
-	while ($list = mysqli_fetch_array($show)) {
+	while ($list = mysqli_fetch_assoc($show)) {
 		echo '<div style="display: flex; justify-content: center; flex-direction: row; position: relative;" class="main">
                     <div id="list">
                         <span id="isilist">'. $list["catatan"] .'</span>
